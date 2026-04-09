@@ -21,101 +21,170 @@ Projeto de streaming com player de vídeos, sistema de login/cadastro e painel s
 
 ```js
 const PORT = 3000;
-🚀 Como rodar o projeto
-1️⃣ Abrir o projeto
+```
 
-Abra a pasta layoutstreamingv7 no Visual Studio Code.
+---
 
-2️⃣ Instalar dependências
+## 📥 Como clonar o projeto (via Git)
 
-No terminal, execute:
+### 1️⃣ Abrir o PowerShell
 
+No Windows, abra o **PowerShell**.
+
+---
+
+### 2️⃣ Clonar o repositório
+
+```bash
+git clone https://github.com/Thundwolf-source/THUNDWOLF-PROJETO.git
+```
+
+---
+
+### 3️⃣ Entrar na pasta do projeto
+
+```bash
+cd THUNDWOLF-PROJETO
+```
+
+---
+
+### 4️⃣ Abrir no VS Code (opcional)
+
+```bash
+code .
+```
+
+---
+
+## 🚀 Como rodar o projeto
+
+### 1️⃣ Abrir o projeto
+Abra a pasta no Visual Studio Code.
+
+---
+
+### 2️⃣ Instalar dependências
+
+```bash
 npm init -y
 npm install express cors express-session
-3️⃣ Iniciar o servidor
+```
+
+---
+
+### 3️⃣ Iniciar o servidor
+
+```bash
 node server.js
-✅ Resultado esperado
+```
 
-No terminal aparecerá:
+---
 
+### ✅ Resultado esperado
+
+```
 Servidor rodando http://localhost:3000
-🌐 Acessar no navegador
+```
+
+---
+
+## 🌐 Acessar no navegador
+
+```
 http://localhost:3000
-📁 Estrutura do projeto
-layoutstreamingv7/
+```
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+THUNDWOLF-PROJETO/
 │
-├── server.js                # Servidor Node.js (API + sessões)
-├── package.json            # Configuração do Node
+├── server.js
+├── package.json
 │
 ├── database/
-│   └── users.json          # Banco simples de usuários
+│   └── users.json
 │
-├── public/                 # Parte web principal
+├── public/
 │   ├── index.html
 │   ├── cadastro.html
 │   ├── admin.html
 │   ├── produtos.html
 │   └── app.js
 │
-├── js/                     # Scripts do frontend
-├── css/                    # Estilos
-├── img/                    # Imagens
+├── js/
+├── css/
+├── img/
 │
-├── index.html              # Página inicial
-├── login.html              # Login
-├── cadastro.html           # Cadastro
-├── canais.html             # Player de canais
-├── trailer-player.html     # Player de trailers
-├── Perfil.html             # Perfil do usuário
-├── sobre.html              # Página sobre
+├── index.html
+├── login.html
+├── cadastro.html
+├── canais.html
+├── trailer-player.html
+├── Perfil.html
+├── sobre.html
 │
-└── playlist.php            # Playlist (uso externo)
-🔐 Funcionalidades
-✅ Cadastro de usuários
-✅ Sistema de login com sessão (express-session)
-✅ Armazenamento local em JSON
-✅ Player de vídeos (HLS)
-✅ Página de canais
-✅ Player de trailers
-✅ Área de perfil do usuário
-✅ Painel administrativo básico
-⚙️ Backend (server.js)
+└── playlist.php
+```
 
-O backend é simples e funcional:
+---
 
-Usa Express para criar o servidor
-Usa express-session para autenticação
-Permite requisições externas com CORS
-Salva usuários no arquivo:
+## 🔐 Funcionalidades
+
+- Cadastro de usuários  
+- Login com sessão  
+- Armazenamento em JSON  
+- Player de vídeo (HLS)  
+- Página de canais e trailers  
+- Área de perfil  
+- Painel admin básico  
+
+---
+
+## ⚙️ Backend (server.js)
+
+- Express  
+- express-session  
+- CORS  
+
+Armazena usuários em:
+
+```
 /database/users.json
-🧠 Como funciona o sistema
-O usuário se cadastra → dados salvos no JSON
-O login cria uma sessão
-As páginas protegidas verificam essa sessão
-O player carrega vídeos (canais/trailers)
-Integração com TMDB para conteúdo
-💡 Dicas úteis
+```
 
-🔄 Se der erro no login:
-→ Apague o arquivo:
+---
 
-database/users.json
-⚡ Sempre rode o servidor antes de acessar o site
-🛠️ Para melhorar o projeto futuramente:
-Usar banco de dados (MongoDB/MySQL)
-Melhorar segurança das sessões
-Implementar autenticação com token (JWT)
+## 💡 Dicas úteis
 
-🛠️ Tecnologias usadas
-Node.js
-Express
-Express-session
-Cors
-HTML5
-CSS3
-JavaScript
-HLS.js (player de vídeo)
-TMDB API
-👨‍💻 Autor 👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇
+- Se der erro no login: apague os usuario e cadastra novamente deixe assim em users.json []
+```
+caminho: database/users.json
+```
 
+- Sempre rode o servidor antes de acessar
+
+- Melhorias futuras:
+  - Banco de dados
+  - JWT
+  - Segurança
+
+---
+
+## 🛠️ Tecnologias usadas
+
+- Node.js  
+- Express  
+- Express-session  
+- Cors  
+- HTML, CSS, JS  
+- HLS.js  (Player de video)
+- TMDB API  
+
+---
+
+👨‍💻 Autor 😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎😎
 Projeto desenvolvido por Pedro, Alexandre e Caio
