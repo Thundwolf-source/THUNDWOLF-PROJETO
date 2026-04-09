@@ -4,26 +4,32 @@ Projeto de streaming com player de vídeos, sistema de login/cadastro e painel s
 
 ---
 
-## 🚀 Como rodar o projeto
+## ⚠️ Observações importantes
 
-⚠️ Observações importantes
-Sistema focado em TMDB https://www.themoviedb.org/   'The Movie Database'
-Precisa ter Node.js instalado link: https://nodejs.org/pt-br/download
-Use o Node Essentials Extenção do visual studio
-Não usa banco de dados (é tudo em JSON)
-Se der erro de porta, altere no server.js:
+- Sistema focado em integração com **TMDB (The Movie Database)**  
+  👉 https://www.themoviedb.org/
+
+- É necessário ter o **Node.js instalado**  
+  👉 https://nodejs.org/pt-br/download
+
+- Recomendado usar a extensão **Node Essentials** no Visual Studio Code
+
+- ❗ Não utiliza banco de dados  
+  → Os dados são armazenados em arquivos JSON
+
+- Caso a porta esteja ocupada, altere no `server.js`:
+
+```js
 const PORT = 3000;
+🚀 Como rodar o projeto
+1️⃣ Abrir o projeto
 
-### 1️⃣ Abrir o projeto
-Abra a pasta **layoutstreamingv7** no Visual Studio Code.
+Abra a pasta layoutstreamingv7 no Visual Studio Code.
 
----
+2️⃣ Instalar dependências
 
-### 2️⃣ Instalar dependências
+No terminal, execute:
 
-No terminal, rode:
-
-```bash
 npm init -y
 npm install express cors express-session
 3️⃣ Iniciar o servidor
@@ -40,6 +46,7 @@ layoutstreamingv7/
 │
 ├── server.js                # Servidor Node.js (API + sessões)
 ├── package.json            # Configuração do Node
+│
 ├── database/
 │   └── users.json          # Banco simples de usuários
 │
@@ -64,20 +71,51 @@ layoutstreamingv7/
 │
 └── playlist.php            # Playlist (uso externo)
 🔐 Funcionalidades
-Cadastro de usuários
-Login com sessão (express-session)
-Armazenamento em JSON (sem banco de dados)
-Player de vídeo (HLS)
-Página de canais e trailers
-Área de perfil
-⚙️ Como funciona o backend
+✅ Cadastro de usuários
+✅ Sistema de login com sessão (express-session)
+✅ Armazenamento local em JSON
+✅ Player de vídeos (HLS)
+✅ Página de canais
+✅ Player de trailers
+✅ Área de perfil do usuário
+✅ Painel administrativo básico
+⚙️ Backend (server.js)
 
-O server.js:
+O backend é simples e funcional:
 
-Usa Express
-
-Salva usuários em:
-
+Usa Express para criar o servidor
+Usa express-session para autenticação
+Permite requisições externas com CORS
+Salva usuários no arquivo:
 /database/users.json
-Controla login com sessão
-Libera acesso via CORS
+🧠 Como funciona o sistema
+O usuário se cadastra → dados salvos no JSON
+O login cria uma sessão
+As páginas protegidas verificam essa sessão
+O player carrega vídeos (canais/trailers)
+Integração com TMDB para conteúdo
+💡 Dicas úteis
+
+🔄 Se der erro no login:
+→ Apague o arquivo:
+
+database/users.json
+⚡ Sempre rode o servidor antes de acessar o site
+🛠️ Para melhorar o projeto futuramente:
+Usar banco de dados (MongoDB/MySQL)
+Melhorar segurança das sessões
+Implementar autenticação com token (JWT)
+
+🛠️ Tecnologias usadas
+Node.js
+Express
+Express-session
+Cors
+HTML5
+CSS3
+JavaScript
+HLS.js (player de vídeo)
+TMDB API
+👨‍💻 Autor 👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇👇
+
+Projeto desenvolvido por Pedro, Alexandre e Caio
