@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Produtos</title>
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+<h2>Cadastro de Produtos</h2>
+
+<form id="productForm" onsubmit="registerProduct(event)">
+    <input id="pid" placeholder="ID" required>
+    <input id="pname" placeholder="Nome" required>
+    <input id="pprice" placeholder="Preço" required>
+    <input id="pstock" placeholder="Estoque" required>
+    <button>Cadastrar</button>
+</form>
+
+<h3>Produtos Cadastrados</h3>
+<div id="products"></div>
+
+
+<h2>Deletar Produto</h2>
+<form id="deleteForm" onsubmit="deleteProduct(event)">
+    <input id="deleteId" placeholder="ID" required>
+    <button>Excluir</button>
+</form>
+
+<p><a href="admin.html">Área do Administrador</a></p>
+
+</body>
+</html>

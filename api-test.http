@@ -1,0 +1,12 @@
+### POST - Cadastro
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "Marcos",
+    "username": "marcos",
+    "password": "123"
+}
+
+### GET - Listar usuário
+GET http://localhost:3000/users

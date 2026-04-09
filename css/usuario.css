@@ -1,0 +1,41 @@
+.container-form,
+.perfil-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.form-box,
+.perfil-box {
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    color: white;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.foto-perfil {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}

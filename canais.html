@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./atyle.css">
+  <link rel="stylesheet" href="./css/play.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <script src="./script.js" defer></script>
+  <script src="./js/hls.js"></script>
+  <title>THUNDWOLF</title>
+</head>
+<body>
+  <header class="header">
+    <span class="logo">THUNDWOLF</span>
+    <nav class="navHeader">
+      <ul class="mrnufilm">
+        <a href="./index.html" class="link-top" id="homeBtn">INICIO</a>
+        <a href="./Perfil.html" class="link-top" id="perfilBtn">PERFIL</a>
+        <a href="#" class="link-top" id="logoutLink">SAIR</a>
+      </ul>
+      <div class="traillermenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main canais-main">
+    <div class="wrap-player">
+      <h2 class="title-player">THUNDWOLF TV</h2>
+
+      <div class="player" id="player">
+        <div class="video-wrap">
+          <video id="video" controls autoplay playsinline></video>
+
+          <div id="ytContainer">
+            <iframe
+              id="yt"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+            <div class="yt-blocker" id="ytBlocker"></div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="prev" type="button">⏮ Anterior</button>
+          <button id="playToggle" type="button">▶️ Play/Pause</button>
+          <button id="next" type="button">Próximo ⏭</button>
+          <select id="playlistSelect" title="Playlist"></select>
+          <div class="spacer"></div>
+          <button id="muteBtn" type="button">🔊 Mudo</button>
+          <select id="qualitySelect" title="Qualidade">
+            <option value="">Qualidade</option>
+          </select>
+          <button id="reload" type="button">🔄 Recarregar</button>
+          <button id="fs" type="button">⛶ Tela cheia</button>
+        </div>
+
+        <div class="controls controls-bottom">
+          <span class="status" id="status">Carregando…</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="textFooter">&copy; THUNDWOLF</p>
+    <p class="textFooter">Todos os direitos reservados</p>
+    <p class="textFooter">Desenvolvido por 0079</p>
+  </footer>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./js/canais.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "layoutstreamingv7",
+  "version": "1.0.0",
+  "description": "Projeto de streaming com player de vídeos, sistema de login/cadastro e painel simples usando Node.js.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0"
+  }
+}

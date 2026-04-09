@@ -1,0 +1,95 @@
+.navHeader{
+    display:flex;
+    gap:18px;
+    margin-right:20px;
+    flex-wrap:wrap;
+  }
+
+.link-top{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    font-weight:700;
+    padding:8px 10px;
+    border-radius:8px;
+    transition:0.2s;
+  }
+  
+.link-top:hover{
+    background:rgba(255,255,255,.15);
+  }
+  
+
+.traillermenu{
+    display: none;
+    cursor: pointer;
+  }
+
+
+@media(max-width: 760px){
+    .traillermenu{
+        display: block;
+    }
+    .mrnufilm{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: #101026;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s ease;
+    }
+   
+    .bar{
+      display: block;
+      width: 20px;
+      height: 3px;
+      border-radius: 2px;
+      margin: 5px auto;
+      background-color: #fff;
+      transition: all 0.3s ease-in-out;
+  }
+   
+    .mrnufilm{
+      position: fixed;
+      left: -100%;
+      top: 79px;
+      margin: 5px;
+      gap: 0;
+      border-radius: 0 0 20px 20px;
+      background-color: #880015;
+      text-align: center;
+      flex-direction: column;
+      width: 100%;
+      transition: 0.3s ease;
+    }
+
+   
+    .link-top{
+        margin: 16px 0;
+    }
+   
+    .link-top.actvate{
+      left: 0;
+    }
+   
+    .mrnufilm.active{
+        left: 0;
+    }
+   
+    .traillermenu.active .bar:nth-child(2){
+        opacity: 0;
+    }
+   
+    .traillermenu.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+   
+    .traillermenu.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+   
+  }

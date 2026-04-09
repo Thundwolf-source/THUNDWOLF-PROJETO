@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./atyle.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <script src="./script.js" type="text/javascript" defer></script>
+  <title>THUNDWOLF</title>
+</head>
+
+<body>
+  <header class="header">
+    <span class="logo">THUNDWOLF</span>
+    <nav class="navHeader">
+      <ul class="mrnufilm">
+        <a href="#" class="link-top" id="homeBtn">INICIO</a>
+        <a href="./canais.html" class="link-top">CANAL TV</a>
+        <a href="#" class="link-top" id="serieBtn">SERIE</a>
+        <a href="#" class="link-top" id="filmeBtn">FILME</a>
+        <a href="./login.html" class="link-top" id="login">LOGIN</a>
+        <a href="./sobre.html" class="link-top" id="inform">SOBRE</a>
+      </ul>
+      <div class="traillermenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    </nav>
+  </header>
+
+  <section class="toolbar">
+    <div class="searchBox">
+      <input type="text" id="searchInput" placeholder="Pesquisar filme ou série..." />
+      <button id="searchBtn">Pesquisar</button>
+    </div>
+  </section>
+
+  <main class="main" id="grid"></main>
+
+  <footer class="footer">
+    <p class="textFooter">&copy THUNDWOLF</p>
+    <p class="textFooter">Todos os direitos reservados</p>
+    <p class="textFooter">Desenvolvido por 0079</p>
+  </footer>
+
+  <div class="modal hidden" id="detailsModal" aria-hidden="true">
+    <div class="modalBox" role="dialog" aria-modal="true">
+      <button class="closeModal" id="closeDetails" aria-label="Fechar">&times;</button>
+
+      <div class="modalContent">
+        <img id="modalPoster" class="modalPoster" src="" alt="" />
+
+        <div class="modalInfo">
+          <h2 id="modalTitle">Título</h2>
+          <p class="metaInfo" id="modalMeta"></p>
+          <p class="voteBox" id="modalVote">⭐ Avaliação dos usuários: 0.0</p>
+          <p class="modalDescription" id="modalDescription"></p>
+          <div class="genreList" id="modalGenres"></div>
+
+          <div class="modalActions">
+            <button id="watchTrailerBtn">▶ Ver trailer</button>
+            <button id="closeInfoBtn" class="btnGhost">Fechar</button>
+          </div>
+
+          <section class="detailSection hidden" id="tvSection">
+            <h3>Temporadas e episódios</h3>
+            <div id="seasonTabs" class="seasonTabs"></div>
+            <div id="episodesList" class="episodesList"></div>
+          </section>
+
+          <section class="detailSection" id="recommendationSection">
+            <h3>Recomendações</h3>
+            <div id="recommendations" class="recommendations"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="modal hidden" id="trailerModal" aria-hidden="true">
+    <div class="modalBox trailerBox" role="dialog" aria-modal="true">
+      <button class="closeModal" id="closeTrailer" aria-label="Fechar">&times;</button>
+
+      <div class="trailerPlayer">
+        <iframe
+          id="trailerFrame"
+          title="Trailer Player"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

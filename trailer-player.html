@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="./css/player.css" />
+  <title>Trailer Player</title>
+</head>
+<body>
+  <div class="wrap" id="root">
+    <div class="stage">
+      <div id="ytapi"></div>
+      <div class="clickBlocker" title="Controles do YouTube bloqueados"></div>
+    </div>
+
+    <div class="controls">
+      <button id="play" type="button">▶️</button>
+      <span class="time" id="time">00:00 / 00:00</span>
+      <input class="progress" id="progress" type="range" min="0" max="1000" value="0" />
+      <button id="mute" type="button">🔊</button>
+      <input id="volume" type="range" min="0" max="100" value="100" />
+      <select id="quality" title="Qualidade">
+        <option value="" selected>Qualidade</option>
+      </select>
+      <div class="spacer"></div>
+      <button id="fs" type="button">⛶</button>
+    </div>
+  </div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./js/player.js"></script>
+</body>
+</html>

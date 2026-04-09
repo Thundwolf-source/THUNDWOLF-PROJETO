@@ -1,0 +1,156 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background: #000;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+body {
+  overflow: hidden;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+}
+
+.stage {
+  position: relative;
+  flex: 1;
+  min-height: 220px;
+  background: #000;
+}
+
+#ytapi,
+#ytapi iframe {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  display: block;
+}
+
+.clickBlocker {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  z-index: 5;
+}
+
+.controls {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.92));
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+button,
+select,
+input[type="range"] {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover,
+select:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+select {
+  color-scheme: dark;
+  background: #111320;
+}
+
+option {
+  background: #111320;
+  color: #fff;
+}
+
+.progress {
+  flex: 1;
+  min-width: 180px;
+}
+
+.time {
+  font-size: 14px;
+  opacity: 0.85;
+  font-variant-numeric: tabular-nums;
+}
+
+#volume {
+  width: 110px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+:fullscreen .wrap {
+  min-height: 100vh;
+}
+
+@media (max-width: 700px) {
+  .controls {
+    justify-content: center;
+  }
+
+  .spacer {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow: auto;
+  }
+
+  .wrap {
+    min-height: 100%;
+  }
+
+  .stage {
+    min-height: 180px;
+  }
+
+  .controls {
+    padding: 12px 12px 12px;
+    gap: 8px;
+  }
+
+  button,
+  select,
+  #volume,
+  .progress {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .wrap {
+    padding-bottom: 80px;
+  }
+}

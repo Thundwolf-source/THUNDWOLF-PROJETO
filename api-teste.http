@@ -1,0 +1,50 @@
+### POST - Cadastro
+POST http://localhost:3000/users
+content-type: application/json
+ 
+{
+    "name": "maria",
+    "username": "maria",
+    "password": "123"
+}
+
+### GET -Listar usuarios
+GET http://localhost:3000/users
+
+### Post - validar acesso (login)
+POST http://localhost:3000/login
+content-type: application/json
+ 
+{
+    "username": "maria",
+    "password": "123"
+}
+
+### cadastro de novos produtos
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "id": "1",
+    "name": "abacate",
+    "price": 2.99,
+    "description": "fruta",
+    "stock": 10
+}
+
+### LISTAR PRODUTOS
+GET http://localhost:3000/products/
+### listar por id
+GET http://localhost:3000/products/1
+
+### put - atualizar estoque do produtopor If-Modified-Since: 
+PUT http://localhost:3000/products/1/stock
+Content-Type: application/json
+
+{
+    "stock": 4000
+}
+
+### Delete - Deletar produto por id
+
+DELETE  http://localhost:3000/products/1

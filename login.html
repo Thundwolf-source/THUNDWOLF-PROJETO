@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./atyle.css">
+  <link rel="stylesheet" href="./css/play.css">
+  <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/usuario.css">
+  <script src="./script.js" defer></script>
+  <title>THUNDWOLF - Login</title>
+</head>
+<body>
+  <header class="header">
+    <span class="logo">THUNDWOLF</span>
+    <nav class="navHeader">
+      <ul class="mrnufilm">
+        <a href="./index.html" class="link-top">INICIO</a>
+        <a href="./cadastro.html" class="link-top">CADASTRAR</a>
+      </ul>
+      <div class="traillermenu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-form">
+    <section class="form-box">
+      <h2>Login</h2>
+      <form onsubmit="return login(event)">
+        <input type="text" name="username" placeholder="Digite seu username" required>
+        <input type="password" name="password" placeholder="Digite sua senha" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="textFooter">&copy; THUNDWOLF</p>
+    <p class="textFooter">Todos os direitos reservados</p>
+    <p class="textFooter">Desenvolvido por 0079</p>
+  </footer>
+</body>
+</html>
